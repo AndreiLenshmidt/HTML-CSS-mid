@@ -1,0 +1,166 @@
+@import "vars";
+
+@mixin content-center() {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+@mixin paddings() {
+  padding-left: $standart-pdl;
+  padding-right: $standart-pdr;
+}
+@mixin fontStyles($size, $weigth, $line-hight, $color) {
+  font-size: $size;
+  font-weight: $weigth;
+  line-height: $line-hight;
+  color: $color;
+}
+
+.brad-cramp-wrap {
+  background-color: $brad-cramp-bkg;
+}
+.brad-cramp {
+  @include content-center();
+  @include paddings();
+
+  &__headding {
+    padding-top: calc($standart-pdt * 3.75);
+    padding-bottom: calc($standart-pdb * 3.75);
+  }
+  &__link {
+    @include fontStyles(calc($fontSize * 1.5), 400, normal, $pinkColor);
+  }
+  &__nav {
+    align-self: center;
+
+    &__link {
+      @include fontStyles(calc($fontSize * 0.875), 300, normal, #636363);
+    }
+
+    &__link:last-child {
+      @include fontStyles(calc($fontSize * 0.875), 700, normal, $pinkColor);
+    }
+  }
+}
+
+.product {
+  @include content-center();
+  text-align: center;
+  margin-top: calc($standart-pdt * -4);
+  padding-bottom: calc($standart-pdb * 4);
+  background-color: $whiteColor;
+  border: 1px solid #eaeaea;
+  z-index: 1;
+
+  &__img-box {
+    background-color: $product-bkg;
+  }
+
+  &__img {
+    @include content-center();
+    @include paddings();
+    padding-top: calc($standart-pdt * 0.75);
+    padding-bottom: calc($standart-pdb * 4);
+  }
+
+  &__img__left,
+  &__img__right {
+    position: relative;
+  }
+  &__img__left:hover::before,
+  &__img__right:hover::after {
+    color: $pinkColor;
+  }
+  &__img__left::before {
+    content: "<";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-size: calc($fontSize * 2);
+    font-weight: 900;
+    padding: $standart-pdt calc($standart-pdt * 1.5);
+    background-color: #2a2a2a26;
+    align-self: center;
+    color: $blackColor;
+    transition: color 0.3s;
+  }
+  &__img__right::after {
+    content: ">";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: calc($fontSize * 2);
+    font-weight: 900;
+    padding: $standart-pdt calc($standart-pdt * 1.6);
+    background-color: #2a2a2a26;
+    align-self: center;
+    color: $blackColor;
+    transition: color 0.3s;
+  }
+
+  &__description {
+    @include paddings();
+  }
+  &__description-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  &__category {
+    padding-top: calc($standart-pdt * 4.0625);
+    padding-bottom: calc($standart-pdb * 0.75);
+    flex-direction: column;
+    &__link {
+      @include fontStyles(calc($fontSize * 0.875), 300, normal, $pinkColor);
+      padding-bottom: calc($standart-pdb * 0.75);
+    }
+    &__line {
+      width: calc($standart-width * 3.9375);
+      height: calc($standart-hight * 0.1875);
+      background-color: $pinkColor;
+      align-self: center;
+    }
+  }
+
+  &__name {
+    @include fontStyles(calc($fontSize * 1.125), 300, normal, #4d4d4d);
+    padding-bottom: calc($standart-pdb * 3);
+  }
+
+  &__text {
+    @include fontStyles(calc($fontSize * 0.875), 300, normal, #5e5e5e);
+    padding-bottom: calc($standart-pdb * 4.0625);
+    max-width: calc($content-width * 0.5614);
+    box-sizing: border-box;
+    padding-left: calc($standart-pdl * 2.7);
+    padding-right: calc($standart-pdr * 2.7);
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  &__text::after {
+    padding-top: calc($standart-pdt * 2);
+    display: block;
+    content: $price;
+    @include fontStyles(calc($fontSize * 1.5), 300, normal, #ef5b70);
+  }
+
+  &__options {
+    padding-top: calc($standart-pdt * 4.0625);
+    padding-bottom: calc($standart-pdb * 3);
+  }
+
+  &__select {
+    border: none;
+    outline: none;
+    padding: calc($standart-pdt * 0.7) calc($standart-pdl * 0.57);
+    box-sizing: border-box;
+    @include fontStyles(calc($fontSize * 0.875), 400, normal, #6f6e6e);
+  }
+}
+
+.shop-wrap {
+  @include paddings();
+}
+.shop__container {
+  @include content-center();
+  padding-top: calc($standart-pdt * 8);
+  padding-bottom: calc($standart-pdb * 8);
+}

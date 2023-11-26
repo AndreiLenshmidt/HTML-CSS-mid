@@ -1,0 +1,194 @@
+@mixin content-center() {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+@mixin paddings() {
+  padding-left: $standart-pdl;
+  padding-right: $standart-pdr;
+}
+@mixin fontStyles($size, $weigth, $line-hight, $color) {
+  font-size: $size;
+  font-weight: $weigth;
+  line-height: $line-hight;
+  color: $color;
+}
+
+.catalog-wrap {
+  @include paddings();
+}
+.catalog {
+  @include content-center();
+  padding-bottom: calc($standart-pdb * 6);
+
+  &__fillter-box {
+    padding-top: calc($standart-pdt * 3.25);
+    padding-bottom: calc($standart-pdb * 4);
+    position: relative;
+  }
+  &__fillters {
+    width: 31%;
+    justify-content: flex-start;
+  }
+  &__fillters:first-child {
+    position: absolute;
+    left: 0;
+    top: calc($standart-pdt * 2);
+    z-index: 5;
+  }
+  &__fillters:nth-child(2) {
+    position: absolute;
+    left: 34.333333%;
+  }
+  &__fillters[open] {
+    width: 31%;
+    background-color: $whiteColor;
+    box-sizing: border-box;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  }
+  &__fillter-desc {
+    @include fontStyles(calc($fontSize * 0.875), 400, normal, #6f6e6e);
+    padding-left: $standart-pdl;
+    padding-bottom: $standart-pdb;
+    padding-top: $standart-pdt;
+  }
+  &__fillter-icon {
+    padding-left: calc($standart-pdl * 0.6875);
+  }
+  &__fillters[open] &__fillter-desc {
+    color: $pinkColor;
+  }
+  &__fillters[open] &__fillter-icon path {
+    fill: $pinkColor;
+  }
+  &__category {
+    @include fontStyles(calc($fontSize * 0.875), 400, normal, #6f6e6e);
+    padding-left: $standart-pdl;
+    box-sizing: border-box;
+    margin-bottom: calc($standart-pdb * 1.125);
+
+    &__summary {
+      padding-left: calc($standart-pdl * 0.75);
+      box-sizing: border-box;
+      padding-top: calc($standart-pdt / 2);
+      padding-bottom: calc($standart-pdb * 0.625);
+      border-left: 5px solid $pinkColor;
+      border-bottom: 1px solid #ebebeb;
+    }
+
+    &__item-box {
+      padding: 12px;
+      flex-direction: column;
+    }
+  }
+  &__category[open] {
+    color: $pinkColor;
+  }
+
+  &__category[open] &__category__item {
+    @include fontStyles(calc($fontSize * 0.875), 400, normal, #6f6e6e);
+    padding-top: calc($standart-pdt * 0.6875);
+  }
+
+  &__datails__desc {
+    @include fontStyles(calc($fontSize * 0.875), 400, normal, #6f6e6e);
+    padding-right: calc($standart-pdr * 1.625);
+  }
+  &__datails__desc::after {
+    content: url(img/arrow-down.svg);
+    padding-left: calc($standart-pdl * 0.625);
+  }
+
+  &__datails-box {
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+    z-index: 5;
+    min-width: calc($standart-width * 5);
+    position: absolute;
+    padding-bottom: calc($standart-pdt * 0.75);
+    left: -12px;
+    top: 25px;
+  }
+
+  &__datails {
+    position: relative;
+  }
+  &__datails[open] &__size {
+    padding: calc($standart-pdt * 0.5625) calc($standart-pdt * 0.5625) 0
+      calc($standart-pdt * 0.75);
+  }
+  &__datails[open] &__size__text {
+    padding-left: calc($standart-pdt * 0.5625);
+    @include fontStyles(calc($fontSize * 0.875), 400, normal, #6f6e6e);
+  }
+
+  &__goods {
+    flex-wrap: wrap;
+    padding-bottom: calc($standart-pdb * 6);
+  }
+}
+
+.swiper {
+  width: 100%;
+  z-index: 1;
+
+  &-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-pagination {
+    display: flex;
+    justify-content: space-between;
+    width: calc($content-width / 2.96) !important;
+    height: 43px;
+    padding-top: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid #ebebeb;
+    left: 33.15% !important;
+  }
+
+  &-button-prev {
+    top: 98.5% !important;
+    left: 20% !important;
+    color: #000;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $pinkColor;
+    }
+  }
+
+  &-button-next {
+    top: 98.5% !important;
+    right: 20% !important;
+    color: #000;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $pinkColor;
+    }
+  }
+
+  &-pagination-bullet {
+    padding-left: 11px;
+    padding-right: 11px;
+    text-align: center;
+    line-height: 100%;
+    font-size: $fontSize;
+    color: #c4c4c4;
+    opacity: 1;
+    background: rgba(255, 255, 255, 1);
+
+    &-active {
+      color: $pinkColor;
+    }
+  }
+}

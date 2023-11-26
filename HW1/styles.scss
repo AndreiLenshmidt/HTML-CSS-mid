@@ -1,0 +1,532 @@
+@import "vars";
+
+@mixin content-center() {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+@mixin paddings() {
+  padding-left: $standart-pdl;
+  padding-right: $standart-pdr;
+}
+@mixin fontStyles($size, $weigth, $line-hight, $color) {
+  font-size: $size;
+  font-weight: $weigth;
+  line-height: $line-hight;
+  color: $color;
+}
+
+@keyframes scale-btn {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0.95, 0.95);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Lato";
+}
+summary {
+  display: block;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.wraper {
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header-wrap {
+  background-color: $blackColor;
+}
+
+#check-menu {
+  position: absolute;
+  left: -999999px;
+  visibility: hidden;
+}
+#check-menu:checked ~ .header__nav__menu {
+  display: block;
+  width: 232px;
+  box-sizing: border-box;
+  position: absolute;
+  background: $whiteColor;
+  z-index: 10;
+  right: -0px;
+  top: 73px;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.header {
+  @include paddings();
+  @include content-center();
+  align-items: center;
+
+  &__nav__menu {
+    display: none;
+    list-style: none;
+    padding: calc($standart-pdt * 2);
+
+    &__headding {
+      @include fontStyles(calc($fontSize * 0.875), 700, normal, $blackColor);
+    }
+
+    &__details {
+      @include fontStyles(calc($fontSize * 0.875), 400, normal, $pinkColor);
+    }
+
+    &__item {
+      padding-top: calc($standart-pdt * 1.25);
+      transition: all 0.3s;
+    }
+
+    &__link {
+      padding-top: calc($standart-pdt * 0.75);
+      padding-left: calc($standart-pdl * 1.25);
+      @include fontStyles(calc($fontSize * 0.875), 400, normal, #6f6e6e);
+      transition: all 0.3s;
+    }
+  }
+}
+// logo
+.index-page-link {
+  display: block;
+  width: calc($standart-width * 2.75);
+  height: calc($standart-hight * 2.375);
+  padding: calc($standart-pdt * 1.0625);
+  align-self: center;
+}
+.index-page-img {
+  width: calc($standart-width * 2.75);
+  height: calc($standart-hight * 2.375);
+}
+
+// Awsome icons
+.fa {
+  &-header-icons {
+    color: $greyColor;
+    @include paddings();
+    padding-top: calc($standart-pdt * 2.25);
+    padding-bottom: calc($standart-pdb * 2.25);
+    transition: color 0.3s;
+  }
+  &-header-icons:hover {
+    cursor: pointer;
+    color: $pinkColor;
+  }
+  &-header-icons:active {
+    cursor: pointer;
+    color: $whiteColor;
+  }
+  &-bars {
+    position: relative;
+    display: block;
+  }
+  &-bars:hover .header__nav__menu {
+    position: absolute;
+    display: block;
+    z-index: 11;
+    top: 50px;
+    left: 30px;
+    flex-direction: column;
+  }
+  &-cart-shopping {
+    padding-right: $standart-pdr;
+  }
+  &-advantage {
+    color: $pinkColor;
+    position: relative;
+  }
+  &-brands {
+    width: calc($standart-width * 1.875);
+    height: calc($standart-hight * 0.9375);
+    text-align: center;
+    background-color: $whiteColor;
+    padding-top: $standart-pdt;
+    display: block;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  &-brands:hover {
+    background-color: $pinkColor;
+    color: $whiteColor;
+    cursor: pointer;
+  }
+  &-brands:active {
+    color: $pinkColor;
+    background-color: $whiteColor;
+    cursor: pointer;
+  }
+  &-chevron-down {
+    padding-left: calc($standart-pdl * 0.625);
+  }
+}
+
+.main-wrap {
+  background-color: #f1e4e6;
+  margin-bottom: calc($standart-pdb * 4.0625);
+}
+.main {
+  @include paddings();
+  @include content-center();
+
+  &__figure {
+    width: 50%;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__right {
+    align-self: center;
+    padding-bottom: calc($standart-pdb * 3.75);
+    max-width: calc($content-width * 0.352632);
+  }
+  &__headding {
+    @include fontStyles(calc($fontSize * 3), 900, normal, $blackColor);
+    padding-left: $standart-pdl;
+    border-left: 12px solid $pinkColor;
+  }
+  &__text {
+    @include fontStyles(calc($fontSize * 2), 700, normal, $blackColor);
+    padding-left: $standart-pdl;
+    border-left: 12px solid $pinkColor;
+
+    &__red {
+      color: $pinkColor;
+    }
+  }
+}
+
+.reclame {
+  @include content-center();
+  @include paddings();
+  display: grid;
+  grid-template: 13fr 9fr/1fr 1fr 1fr;
+  height: calc($standart-hight * 29.375);
+  gap: calc($standart-gap * 1.875);
+  text-align: center;
+  margin-bottom: calc($standart-pdb * 6);
+
+  &__text {
+    @include fontStyles($fontSize, 400, normal, $whiteColor);
+    text-align: center;
+    padding-top: calc($standart-pdt * 6.5625);
+    top: 105px;
+  }
+  &__text4 {
+    padding-top: calc($standart-pdt * 4.0625);
+  }
+  &__headding {
+    @include fontStyles(calc($fontSize * 1.5), 700, normal, $pinkColor);
+  }
+  &__part {
+    position: relative;
+  }
+  &__part4 {
+    box-sizing: content-box;
+    grid-column: 1/4;
+  }
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(30%);
+  }
+}
+
+.shop {
+  @include content-center();
+  @include paddings();
+  text-align: center;
+  padding-bottom: calc($standart-pdb * 5.9375);
+  flex-direction: column;
+
+  &__headding {
+    @include fontStyles(calc($fontSize * 1.875), 400, normal, $blackColor);
+  }
+
+  &__text {
+    @include fontStyles(calc($fontSize * 0.875), 400, normal, #9f9f9f);
+    padding-bottom: calc($standart-pdb * 3);
+  }
+
+  &__box {
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    padding-bottom: calc($standart-pdb * 1.125);
+    justify-content: space-between;
+
+    &__img-box {
+      position: relative;
+    }
+
+    &__img-box:hover .shop__card__hover {
+      z-index: 1;
+      cursor: pointer;
+    }
+  }
+
+  &__card {
+    width: 31%;
+    background-color: #f8f8f8;
+    margin-bottom: 2.2%;
+
+    &__img {
+      width: 100%;
+    }
+
+    &__headding,
+    &__text,
+    &__price {
+      @include paddings();
+      text-align: left;
+    }
+
+    &__headding {
+      padding-top: calc($standart-pdt * 2);
+      padding-bottom: $standart-pdb;
+    }
+
+    &__link {
+      @include fontStyles(calc($fontSize * 0.8125), 400, normal, $blackColor);
+    }
+
+    &__text {
+      @include fontStyles(calc($fontSize * 0.875), 300, normal, #5d5d5d);
+    }
+
+    &__price {
+      @include fontStyles($fontSize, 400, normal, $pinkColor);
+      padding: $standart-pdt;
+    }
+
+    &__hover {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #3a3838db;
+      z-index: -1;
+    }
+
+    &__button {
+      @include fontStyles(calc($fontSize * 0.875), 400, normal, $whiteColor);
+      background-color: transparent;
+      outline: none;
+      padding: calc($standart-pdb * 0.8);
+      border: 1px solid $whiteColor;
+      transition: color, border 0.3s;
+    }
+    &__button:hover {
+      color: $pinkColor;
+      border: 1px solid $pinkColor;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    &__button:active {
+      background-color: #f26376;
+      color: $whiteColor;
+      animation: $scale-animation;
+    }
+  }
+
+  &__show-all-btn {
+    @include fontStyles($fontSize, 400, normal, #f26376);
+    padding: $standart-pdt calc($standart-pdl * 2);
+    background-color: $whiteColor;
+    border: 1px solid #f26376;
+    transition: all 0.3s;
+  }
+
+  &__show-all-btn:hover {
+    cursor: pointer;
+    background-color: $pinkColor;
+    color: $whiteColor;
+  }
+
+  &__show-all-btn:active {
+    animation: $scale-animation;
+  }
+}
+
+.advantage-wrap {
+  background-color: $blackColor;
+}
+.advantage {
+  @include content-center();
+  @include paddings();
+  padding-top: calc($standart-pdt * 6.5);
+  padding-bottom: calc($standart-pdb * 6.5);
+
+  &__box {
+    width: calc($content-width * 0.31579);
+    text-align: center;
+
+    &__text {
+      position: absolute;
+      top: 0;
+      left: 26%;
+      color: #fbfbfb;
+      font-size: calc($fontSize * 1.25);
+    }
+  }
+
+  &__headding {
+    @include fontStyles(calc($fontSize * 1.25), 400, normal, #fbfbfb);
+    padding-top: calc($standart-pdt * 1.75);
+    padding-bottom: $standart-pdb;
+  }
+
+  &__text {
+    @include fontStyles(calc($fontSize * 0.875), 300, normal, #fbfbfb);
+    text-align: center;
+    padding-left: calc($standart-pdl * 2);
+    padding-right: calc($standart-pdr * 2);
+  }
+}
+
+.subscribe-wrap {
+  @include paddings();
+  background-color: #f4f4f4b2;
+  background-image: url(img/suscribe-bkg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.subscribe-bkg {
+  position: absolute;
+  background: #f4f4f470;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.subscribe {
+  @include content-center();
+  @include paddings();
+  text-align: center;
+  padding-top: calc($standart-pdt * 6.0625);
+  padding-bottom: calc($standart-pdb * 9.75);
+
+  &__img {
+    width: calc($standart-width * 6);
+    height: calc($standart-hight * 6);
+    border-radius: 100%;
+  }
+
+  &__right,
+  &__left {
+    width: calc($content-width * 0.350877);
+    z-index: 1;
+  }
+
+  &__left__text {
+    @include fontStyles(calc($fontSize * 1.25), 400, normal, $blackColor);
+    text-align: center;
+    padding-top: calc($standart-pdt * 1.875);
+  }
+
+  &__left__text span {
+    font-style: italic;
+  }
+
+  &__right {
+    &__headding {
+      @include fontStyles(calc($fontSize * 1.5), 700, 167.2%, $blackColor);
+      text-align: center;
+      padding-top: calc($standart-pdt * 3.3125);
+    }
+
+    &__text {
+      @include fontStyles(calc($fontSize * 1.25), 400, 167.2%, $blackColor);
+      padding-bottom: calc($standart-pdb * 2);
+    }
+    &__form__btn {
+      width: calc($standart-width * 7);
+      height: calc($standart-hight * 3.125);
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      @include fontStyles(calc($fontSize * 0.875), 400, normal, $whiteColor);
+      text-align: center;
+      background-color: $pinkColor;
+      box-sizing: border-box;
+      border: none;
+      transition: all 0.3s;
+    }
+    &__form__btn:hover {
+      color: $pinkColor;
+      background-color: $whiteColor;
+      border: 1px solid $pinkColor;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+    &__form__btn:active {
+      animation: $scale-animation;
+      box-shadow: 0px 0px 2px 2px #f16d7f;
+    }
+    &__form__input {
+      width: calc($content-width * 0.224561);
+      height: calc($standart-hight * 3.125);
+      box-sizing: border-box;
+      border: none;
+      border-bottom-left-radius: 25px;
+      border-top-left-radius: 25px;
+      background-color: #e1e1e1;
+      padding-left: 22px;
+    }
+    &__form__input::placeholder {
+      @include fontStyles(calc($fontSize * 0.875), 400, normal, $blackColor);
+    }
+    &__form__input:focus {
+      border: none;
+      padding-left: calc($standart-pdl * 1.375);
+      @include fontStyles(calc($fontSize * 0.875), 400, normal, $blackColor);
+      outline: none;
+    }
+  }
+}
+
+.footer-wrap {
+  background-color: $blackColor;
+  @include paddings();
+}
+.footer {
+  @include content-center();
+  @include paddings();
+
+  &__text {
+    @include fontStyles($fontSize, 400, normal, #fbfbfb);
+    padding: calc($standart-pdt * 2);
+  }
+  &__socials {
+    gap: calc($standart-gap / 2);
+    align-items: center;
+  }
+}
+
+@import "product-styles";
+@import "catalog";
+@import "tablet";
+@import "mobile";

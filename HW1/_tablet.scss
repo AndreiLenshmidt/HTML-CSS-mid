@@ -1,0 +1,34 @@
+@media (max-width: 1024px) {
+  .reclame {
+    height: 400px;
+  }
+  .main__headding {
+    font-size: 44px;
+  }
+  .main__text {
+    font-size: 24px;
+  }
+  .shop__box {
+    flex-wrap: wrap;
+    padding-bottom: 18px;
+    justify-content: center;
+    gap: 2.0833%;
+  }
+  .shop__card {
+    width: 48.9%;
+    margin-bottom: 2.0833%;
+  }
+  .advantage {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 64px;
+  }
+  .advantage__box {
+    padding-top: 6.7%;
+  }
+  .subscribe {
+    align-items: center;
+    flex-direction: column;
+  }
+}

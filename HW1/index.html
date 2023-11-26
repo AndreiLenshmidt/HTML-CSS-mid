@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW9</title>
+    <script
+      src="https://kit.fontawesome.com/e054e1cc0f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wraper flex">
+      <div class="header-wrap">
+        <header class="header flex">
+          <div class="header-box flex">
+            <a href="index.html" class="index-page-link">
+              <img class="index-page-img" src="img/logo.svg" alt="logo" />
+            </a>
+            <i class="fa-header-icons fa-solid fa-magnifying-glass fa-xl"></i>
+          </div>
+          <nav class="header__nav flex">
+            <input id="check-menu" type="checkbox" />
+            <label for="check-menu"
+              ><div class="fa-header-icons fa-solid fa-bars fa-xl"></div>
+            </label>
+            <ul class="header__nav__menu">
+              <h3 class="header__nav__menu__headding">MENU</h3>
+              <li class="header__nav__menu__item">
+                <details class="header__nav__menu__details flex">
+                  <summary class="header__nav__menu__summary">MAN</summary>
+                  <a href="#" class="header__nav__menu__link">Accessories</a>
+                  <a href="#" class="header__nav__menu__link">Bags</a>
+                  <a href="#" class="header__nav__menu__link">Denim</a>
+                  <a href="#" class="header__nav__menu__link">T-Shirts</a>
+                </details>
+              </li>
+              <li class="header__nav__menu__item">
+                <details class="header__nav__menu__details flex">
+                  <summary class="header__nav__menu__summary">WOMEN</summary>
+                  <a href="#" class="header__nav__menu__link">Accessories</a>
+                  <a href="#" class="header__nav__menu__link"
+                    >Jackets & Coats</a
+                  >
+                  <a href="#" class="header__nav__menu__link">Polos</a>
+                  <a href="#" class="header__nav__menu__link">T-Shirts</a>
+                  <a href="#" class="header__nav__menu__link">Shirts</a>
+                </details>
+              </li>
+              <li class="header__nav__menu__item">
+                <details class="header__nav__menu__details flex">
+                  <summary class="header__nav__menu__summary">KIDS</summary>
+                  <a href="#" class="header__nav__menu__link">Accessories</a>
+                  <a href="#" class="header__nav__menu__link"
+                    >Jackets & Coats</a
+                  >
+                  <a href="#" class="header__nav__menu__link">Polos</a>
+                  <a href="#" class="header__nav__menu__link">T-Shirts</a>
+                  <a href="#" class="header__nav__menu__link">Shirts</a>
+                  <a href="#" class="header__nav__menu__link">Bags</a>
+                </details>
+              </li>
+            </ul>
+            <a class="header__nav__link" href="#"
+              ><i class="fa-header-icons fa-solid fa-user fa-xl"></i
+            ></a>
+            <a class="header__nav__link" href="#"
+              ><i class="fa-header-icons fa-solid fa-cart-shopping fa-xl"></i
+            ></a>
+          </nav>
+        </header>
+      </div>
+      <div class="main-wrap">
+        <main class="main flex">
+          <figure class="main__figure">
+            <img
+              class="main__img"
+              src="img/main-img.webp"
+              alt="Человек в брендовой куртке"
+            />
+          </figure>
+          <div class="main__right">
+            <h1 class="main__headding">THE BRAND</h1>
+            <p class="main__text">
+              OF LUXERIOUS <span class="main__text__red">FASHION</span>
+            </p>
+          </div>
+        </main>
+      </div>
+      <div class="reclame-wrap">
+        <section class="reclame">
+          <figure class="reclame__part reclame__part1">
+            <img class="reclame__img" src="img/reclame1.webp" alt="img" />
+            <p class="reclame__text">30% OFF</p>
+            <h3 class="reclame__headding">FOR WOMEN</h3>
+          </figure>
+          <figure class="reclame__part reclame__part2">
+            <img class="reclame__img" src="img/reclame2.webp" alt="img" />
+            <p class="reclame__text">HOT DEAL</p>
+            <h3 class="reclame__headding">FOR MEN</h3>
+          </figure>
+          <figure class="reclame__part reclame__part3">
+            <img class="reclame__img" src="img/reclame3.webp" alt="img" />
+            <p class="reclame__text">NEW ARRIVALS</p>
+            <h3 class="reclame__headding">FOR KIDS</h3>
+          </figure>
+          <figure class="reclame__part reclame__part4">
+            <img class="reclame__img" src="img/reclame4.webp" alt="img" />
+            <p class="reclame__text reclame__text4">LUXIROUS & TRENDY</p>
+            <h3 class="reclame__headding">ACCESORIES</h3>
+          </figure>
+        </section>
+      </div>
+      <div class="shop-wrap flex">
+        <section class="shop">
+          <h2 class="shop__headding">Fetured Items</h2>
+          <p class="shop__text">
+            Shop for items based on&nbsp;what we&nbsp;featured in&nbsp;this week
+          </p>
+          <div class="shop__box flex">
+            <article class="shop__card shop__card1">
+              <div class="shop__box__img-box">
+                <div class="shop__card__hover">
+                  <button class="shop__card__button">
+                    <i class="fa-solid fa-cart-shopping fa-2xl"></i>Add to Cart
+                  </button>
+                </div>
+                <img
+                  src="img/card-img1.webp"
+                  alt="Изображение товара"
+                  class="shop__card__img"
+                />
+              </div>
+              <h3 class="shop__card__headding">
+                <a class="shop__card__link" href="product.html"
+                  >ELLERY X&nbsp;M&rsquo;O CAPSULE</a
+                >
+              </h3>
+              <p class="shop__card__text">
+                Known for her sculptural takes on&nbsp;traditional tailoring,
+                Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with
+                Moda Operandi.
+              </p>
+              <p class="shop__card__price">$52.00</p>
+            </article>
+            <article class="shop__card shop__card2">
+              <div class="shop__box__img-box">
+                <div class="shop__card__hover">
+                  <button class="shop__card__button">
+                    <i class="fa-solid fa-cart-shopping fa-2xl"></i>Add to Cart
+                  </button>
+                </div>
+                <img
+                  src="img/card-img2.webp"
+                  alt="Изображение товара"
+                  class="shop__card__img"
+                />
+              </div>
+              <h3 class="shop__card__headding">
+                <a class="shop__card__link" href="product.html"
+                  >ELLERY X&nbsp;M&rsquo;O CAPSULE</a
+                >
+              </h3>
+              <p class="shop__card__text">
+                Known for her sculptural takes on&nbsp;traditional tailoring,
+                Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with
+                Moda Operandi.
+              </p>
+              <p class="shop__card__price">$52.00</p>
+            </article>
+            <article class="shop__card shop__card3">
+              <div class="shop__box__img-box">
+                <div class="shop__card__hover">
+                  <button class="shop__card__button">
+                    <i class="fa-solid fa-cart-shopping fa-2xl"></i>Add to Cart
+                  </button>
+                </div>
+                <img
+                  src="img/card-img3.webp"
+                  alt="Изображение товара"
+                  class="shop__card__img"
+                />
+              </div>
+              <h3 class="shop__card__headding">
+                <a class="shop__card__link" href="product.html"
+                  >ELLERY X&nbsp;M&rsquo;O CAPSULE</a
+                >
+              </h3>
+              <p class="shop__card__text">
+                Known for her sculptural takes on&nbsp;traditional tailoring,
+                Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with
+                Moda Operandi.
+              </p>
+              <p class="shop__card__price">$52.00</p>
+            </article>
+            <article class="shop__card shop__card4">
+              <div class="shop__box__img-box">
+                <div class="shop__card__hover">
+                  <button class="shop__card__button">
+                    <i class="fa-solid fa-cart-shopping fa-2xl"></i>Add to Cart
+                  </button>
+                </div>
+                <img
+                  src="img/card-img4.webp"
+                  alt="Изображение товара"
+                  class="shop__card__img"
+                />
+              </div>
+              <h3 class="shop__card__headding">
+                <a class="shop__card__link" href="product.html"
+                  >ELLERY X&nbsp;M&rsquo;O CAPSULE</a
+                >
+              </h3>
+              <p class="shop__card__text">
+                Known for her sculptural takes on&nbsp;traditional tailoring,
+                Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with
+                Moda Operandi.
+              </p>
+              <p class="shop__card__price">$52.00</p>
+            </article>
+            <article class="shop__card shop__card5">
+              <div class="shop__box__img-box">
+                <div class="shop__card__hover">
+                  <button class="shop__card__button">
+                    <i class="fa-solid fa-cart-shopping fa-2xl"></i>Add to Cart
+                  </button>
+                </div>
+                <img
+                  src="img/card-img5.webp"
+                  alt="Изображение товара"
+                  class="shop__card__img"
+                />
+              </div>
+              <h3 class="shop__card__headding">
+                <a class="shop__card__link" href="product.html"
+                  >ELLERY X&nbsp;M&rsquo;O CAPSULE</a
+                >
+              </h3>
+              <p class="shop__card__text">
+                Known for her sculptural takes on&nbsp;traditional tailoring,
+                Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with
+                Moda Operandi.
+              </p>
+              <p class="shop__card__price">$52.00</p>
+            </article>
+            <article class="shop__card shop__card6">
+              <div class="shop__box__img-box">
+                <div class="shop__card__hover">
+                  <button class="shop__card__button">
+                    <i class="fa-solid fa-cart-shopping fa-2xl"></i>Add to Cart
+                  </button>
+                </div>
+                <img
+                  src="img/card-img6.webp"
+                  alt="Изображение товара"
+                  class="shop__card__img"
+                />
+              </div>
+              <h3 class="shop__card__headding">
+                <a class="shop__card__link" href="product.html"
+                  >ELLERY X&nbsp;M&rsquo;O CAPSULE</a
+                >
+              </h3>
+              <p class="shop__card__text">
+                Known for her sculptural takes on&nbsp;traditional tailoring,
+                Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with
+                Moda Operandi.
+              </p>
+              <p class="shop__card__price">$52.00</p>
+            </article>
+          </div>
+          <button class="shop__show-all-btn">Browse All Product</button>
+        </section>
+      </div>
+      <div class="advantage-wrap">
+        <div class="advantage flex">
+          <article class="advantage__box">
+            <i class="fa-advantage fa-solid fa-truck fa-2xl"></i>
+            <h3 class="advantage__headding">Free Delivery</h3>
+            <p class="advantage__text">
+              Worldwide delivery on&nbsp;all. Authorit tively morph
+              <nobr>next-generation</nobr> innov tion with extensive models.
+            </p>
+          </article>
+          <article class="advantage__box">
+            <i class="fa-advantage fa-solid fa-certificate fa-2xl">
+              <span class="advantage__box__text">%</span>
+            </i>
+            <h3 class="advantage__headding">Sales & discounts</h3>
+            <p class="advantage__text">
+              Worldwide delivery on&nbsp;all. Authorit tively morph
+              <nobr>next-generation</nobr> innov tion with extensive models.
+            </p>
+          </article>
+          <article class="advantage__box">
+            <i class="fa-advantage fa-solid fa-crown fa-2xl"></i>
+            <h3 class="advantage__headding">Quality assurance</h3>
+            <p class="advantage__text">
+              Worldwide delivery on&nbsp;all. Authorit tively morph
+              <nobr>next-generation</nobr> innov tion with extensive models.
+            </p>
+          </article>
+        </div>
+      </div>
+      <div class="subscribe-wrap">
+        <div class="subscribe-bkg"></div>
+        <section class="subscribe flex">
+          <aside class="subscribe__left">
+            <img
+              src="img/Subscriber.webp"
+              alt="Фотография подписчика"
+              class="subscribe__img"
+            />
+            <p class="subscribe__left__text">
+              &laquo;Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+              <span>a&nbsp;pulvinar</span> purus condimentum&raquo;
+            </p>
+          </aside>
+          <div class="subscribe__right">
+            <h3 class="subscribe__right__headding">SUBSCRIBE</h3>
+            <p class="subscribe__right__text">
+              FOR OUR NEWLETTER AND PROMOTION
+            </p>
+            <form class="subscribe__right__form" action="#">
+              <input
+                required
+                type="email"
+                name="email"
+                class="subscribe__right__form__input"
+                placeholder="Enter Your Email"
+              /><button type="submit" class="subscribe__right__form__btn">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </section>
+      </div>
+      <div class="footer-wrap">
+        <footer class="footer flex">
+          <p class="footer__text">© 2021 Brand All Rights Reserved.</p>
+          <div class="footer__socials flex">
+            <div class="fa-brands fa-facebook-f fa-xl"></div>
+            <div class="fa-brands fa-instagram fa-xl"></div>
+            <div class="fa-brands fa-pinterest-p fa-xl"></div>
+            <div class="fa-brands fa-twitter fa-xl"></div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

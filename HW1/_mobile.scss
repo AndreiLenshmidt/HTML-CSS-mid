@@ -1,0 +1,54 @@
+@media (max-width: 768px) {
+    .main {
+      min-height: 363px;
+      justify-content: center;
+    }
+    .main__figure {
+      display: none;
+    }
+    .main__img {
+      display: none;
+    }
+    .main__headding {
+      font-size: 38px;
+    }
+    .main__text {
+      font-size: 20px;
+    }
+    .reclame {
+      grid-template: 248fr 248fr 248fr 111fr/344px;
+      height: 954px;
+      justify-content: center;
+    }
+    .reclame__text4 {
+      padding-top: 10%;
+    }
+    .reclame__part4 {
+      grid-column: 1/1;
+    }
+    .shop__box {
+      flex-wrap: wrap;
+      padding-bottom: 18px;
+      justify-content: center;
+      gap: 2.0833%;
+    }
+    .shop__card {
+      width: 91.4666%;
+      margin-bottom: 2.0833%;
+    }
+    .subscribe__left__text {
+      font-size: 18px;
+    }
+    .subscribe__right__text {
+      font-size: 14px;
+    }
+    .form__input {
+      width: 63.3666%;
+    }
+    .form__btn {
+      width: 28.1%;
+    }
+    .footer__text {
+      padding-left: 0;
+    }
+  }
