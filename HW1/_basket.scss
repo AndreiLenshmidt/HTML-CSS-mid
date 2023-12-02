@@ -1,0 +1,225 @@
+@import "vars";
+
+@mixin content-center() {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+@mixin paddings() {
+  padding-left: $standart-pdl;
+  padding-right: $standart-pdr;
+}
+@mixin fontStyles($size, $weigth, $line-hight, $color) {
+  font-size: $size;
+  font-weight: $weigth;
+  line-height: $line-hight;
+  color: $color;
+}
+
+.feature1::after {
+  content: $feature1;
+  color: #ef5b70;
+}
+.feature2::after {
+  content: $feature2;
+}
+.feature3::after {
+  content: $feature3;
+}
+
+.order {
+  @include paddings();
+  @include content-center();
+  padding-top: calc($standart-pdt * 6);
+  padding-bottom: calc($standart-pdb * 8);
+  gap: $standart-gap;
+  flex-wrap: wrap;
+
+  &__products {
+    max-width: calc($content-width * 0.571929);
+    flex-direction: column;
+    gap: calc($standart-gap * 2.5);
+
+    &__btn-box {
+      padding-top: calc($standart-pdt * 2);
+    }
+    &__btn {
+      padding: $standart-pdt calc($standart-pdl * 2.5);
+      font-family: "Lato";
+      @include fontStyles(calc($fontSize * 0.875), 300, normal, $blackColor);
+      background-color: #fff;
+      border: 1px solid #a4a4a4;
+      transition: all 0.1s;
+    }
+    &__btn:hover {
+      color: $blackColor;
+      background-color: #a4a4a4;
+      cursor: pointer;
+    }
+    &__btn:active {
+      animation: $scale-animation;
+    }
+
+    &__goods {
+      box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+      position: relative;
+
+      &__close {
+        position: absolute;
+        top: 27px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        padding: 3px;
+        right: 22px;
+        transition: all 0.3s;
+      }
+      &__close path {
+        fill: #575757;
+      }
+      &__close:hover path {
+        fill: $pinkColor;
+      }
+      &__close:hover {
+        border: 1px solid $pinkColor;
+        border-radius: 4px;
+        padding: 3px;
+      }
+      &__close:active {
+        border: 1px solid #575757;
+        border-radius: 4px;
+        opacity: 0.3;
+        padding: 3px;
+      }
+      &__close:active path {
+        fill: #575757;
+        opacity: 0.3;
+      }
+    }
+
+    &__goods__img {
+      width: calc($standart-width * 16.375);
+    }
+    &__goods__box {
+      width: calc($standart-width * 24.375);
+      padding: calc($standart-pdt * 1.375) calc($standart-pdr * 1.375)
+        calc($standart-pdr * 1.375) calc($standart-pdr * 2);
+    }
+    &__goods__name {
+      width: calc($standart-width * 13);
+      @include fontStyles(calc($fontSize * 1.5), 400, normal, $blackColor);
+      padding-bottom: calc($standart-pdb * 3);
+    }
+    &__goods__feature,
+    &__goods__span {
+      padding-bottom: calc($standart-pdb * 0.375);
+      @include fontStyles(calc($fontSize * 1.375), 400, normal, #575757);
+    }
+    &__goods__label {
+      justify-content: flex-start;
+    }
+    &__goods__input {
+      display: block;
+      width: calc($standart-width * 3.2);
+      padding-left: 12px;
+      border: 1px solid #eaeaea;
+      outline: none;
+      margin-left: calc($standart-pdl * 1.5);
+      @include fontStyles(calc($fontSize * 1.375), 400, normal, #575757);
+    }
+  }
+
+  &__form-box {
+    width: calc($standart-width * 22.5);
+  }
+  &__form__quote {
+    flex-direction: column;
+    padding-bottom: calc($standart-pdb * 3.75);
+
+    &__haedding {
+      padding-top: $standart-pdt;
+      padding-bottom: calc($standart-pdb * 1.25);
+      @include fontStyles($fontSize, 300, normal, $blackColor);
+    }
+
+    &__input {
+      margin-bottom: calc($standart-pdb * 1.25);
+      @include fontStyles(calc($fontSize * 0.8125), 300, normal, $blackColor);
+      font-family: "Lato";
+      outline: none;
+      padding: $standart-pdb $standart-pdl;
+      border: 1px solid #a4a4a4;
+    }
+    &__input::placeholder {
+      @include fontStyles(calc($fontSize * 0.8125), 300, normal, #b1b1b1);
+    }
+    &__input:focus {
+      @include fontStyles(calc($fontSize * 0.8125), 300, normal, $blackColor);
+      outline: none;
+    }
+    &__button {
+      padding: calc($standart-pdt * 0.625);
+      width: calc($standart-width * 6.25);
+      font-family: "Lato";
+      @include fontStyles(calc($fontSize * 0.6875), 300, normal, #4a4a4a);
+      background-color: #fff;
+      border: 1px solid #a4a4a4;
+      transition: all 0.1s;
+    }
+    &__button:hover {
+      color: $blackColor;
+      background-color: #a4a4a4;
+      cursor: pointer;
+    }
+    &__button:active {
+      animation: $scale-animation;
+    }
+  }
+
+  &__form {
+    &__total {
+      padding: calc($standart-pdt * 2.625);
+      text-align: right;
+      background-color: #f5f3f3;
+    }
+    &__sub-total {
+      @include fontStyles(calc($fontSize * 0.6875), 300, normal, #4a4a4a);
+      padding-bottom: calc($standart-pdb * 0.75);
+    }
+    &__sub-total::after {
+      content: $sub-total;
+      padding-left: calc($standart-pdl * 1.5);
+      margin-right: calc($standart-pdr / 2 * -1);
+    }
+    &__grand-total {
+      @include fontStyles($fontSize, 300, normal, $blackColor);
+      padding-bottom: calc($standart-pdb * 1.3125);
+      border-bottom: 1px solid #e2e2e2;
+    }
+    &__grand-total::after {
+      content: $grand-total;
+      color: #f16d7f;
+      font-weight: bold;
+      padding-left: calc($standart-pdl * 1.5);
+      margin-right: calc($standart-pdr * -0.3125);
+    }
+    &__total-btn {
+      margin-top: calc($standart-pdt * 1.0625);
+      @include fontStyles($fontSize, 300, normal, $whiteColor);
+      background-color: #f16d7f;
+      width: 100%;
+      border: 1px solid $pinkColor;
+      box-sizing: border-box;
+      padding: $standart-pdt calc($standart-pdl * 2);
+      transition: all 0.1s;
+    }
+    &__total-btn:hover {
+      color: $pinkColor;
+      background-color: $whiteColor;
+      border: 1px solid $pinkColor;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+    &__total-btn:active {
+      animation: $scale-animation;
+    }
+  }
+}
