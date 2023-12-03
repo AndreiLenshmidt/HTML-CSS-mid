@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <script
+      src="https://kit.fontawesome.com/e054e1cc0f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wraper flex">
+      <div class="header-wrap">
+        <header class="header flex">
+          <div class="header-box flex">
+            <a href="index.html" class="index-page-link">
+              <img class="index-page-img" src="img/logo.svg" alt="logo" />
+            </a>
+            <i class="fa-header-icons fa-solid fa-magnifying-glass fa-xl"></i>
+          </div>
+          <nav class="header__nav flex">
+            <input id="check-menu" type="checkbox" />
+            <label for="check-menu"
+              ><div class="fa-header-icons fa-solid fa-bars fa-xl"></div>
+            </label>
+            <ul class="header__nav__menu">
+              <h3 class="header__nav__menu__headding">MENU</h3>
+              <li class="header__nav__menu__item">
+                <details class="header__nav__menu__details flex">
+                  <summary class="header__nav__menu__summary">MAN</summary>
+                  <a href="#" class="header__nav__menu__link">Accessories</a>
+                  <a href="#" class="header__nav__menu__link">Bags</a>
+                  <a href="#" class="header__nav__menu__link">Denim</a>
+                  <a href="#" class="header__nav__menu__link">T-Shirts</a>
+                </details>
+              </li>
+              <li class="header__nav__menu__item">
+                <details class="header__nav__menu__details flex">
+                  <summary class="header__nav__menu__summary">WOMEN</summary>
+                  <a href="#" class="header__nav__menu__link">Accessories</a>
+                  <a href="#" class="header__nav__menu__link"
+                    >Jackets & Coats</a
+                  >
+                  <a href="#" class="header__nav__menu__link">Polos</a>
+                  <a href="#" class="header__nav__menu__link">T-Shirts</a>
+                  <a href="#" class="header__nav__menu__link">Shirts</a>
+                </details>
+              </li>
+              <li class="header__nav__menu__item">
+                <details class="header__nav__menu__details flex">
+                  <summary class="header__nav__menu__summary">KIDS</summary>
+                  <a href="#" class="header__nav__menu__link">Accessories</a>
+                  <a href="#" class="header__nav__menu__link"
+                    >Jackets & Coats</a
+                  >
+                  <a href="#" class="header__nav__menu__link">Polos</a>
+                  <a href="#" class="header__nav__menu__link">T-Shirts</a>
+                  <a href="#" class="header__nav__menu__link">Shirts</a>
+                  <a href="#" class="header__nav__menu__link">Bags</a>
+                </details>
+              </li>
+            </ul>
+            <a class="header__nav__link" href="#"
+              ><i class="fa-header-icons fa-solid fa-user fa-xl"></i
+            ></a>
+            <a class="header__nav__link" href="#"
+              ><i class="fa-header-icons fa-solid fa-cart-shopping fa-xl"></i
+            ></a>
+          </nav>
+        </header>
+      </div>
+      <div class="brad-cramp-wrap">
+        <article class="brad-cramp flex">
+          <h1 class="brad-cramp__headding">
+            <a class="brad-cramp__link" href="#">REGISTRATION</a>
+          </h1>
+        </article>
+      </div>
+      <div class="regisrtration-wrap">
+        <section class="registration flex">
+          <form class="registration__form">
+            <label>
+              <p class="registration__headding">Your Name</p>
+              <input
+                class="registration__input registration__name"
+                type="text"
+                placeholder="First Name"
+                required
+              />
+              <input
+                class="registration__input registration__last-name"
+                type="text"
+                placeholder="Last Name"
+                required
+              />
+            </label>
+            <div class="registration__radio-box flex">
+              <label class="flex">
+                <input
+                  class="registration__radio"
+                  type="radio"
+                  name="gender"
+                  value="male"
+                  id="Male"
+                  required
+                />
+                <span class="registration__radio-text">Male</span>
+              </label>
+              <label class="flex">
+                <input
+                  class="registration__radio"
+                  type="radio"
+                  name="gender"
+                  value="female"
+                  id="Female"
+                />
+                <span class="registration__radio-text">Female</span>
+              </label>
+            </div>
+            <p class="registration__headding">Login details</p>
+            <input
+              class="registration__input registration__email"
+              type="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              class="registration__input registration__password"
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <p class="registration__text">
+              Please use 8 or more characters, with at least 1 number and a
+              mixture of uppercase and lowercase letters
+            </p>
+            <button type="submit" class="registration__btn">
+              JOIN NOW
+              <svg
+                class="registration__svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="17"
+                height="10"
+                viewBox="0 0 17 10"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11.54 0.208095C11.6058 0.142131 11.684 0.0897967 11.77 0.0540883C11.8561 0.01838 11.9483 0 12.0415 0C12.1347 0 12.2269 0.01838 12.313 0.0540883C12.399 0.0897967 12.4772 0.142131 12.543 0.208095L16.7929 4.458C16.8589 4.5238 16.9112 4.60196 16.9469 4.68802C16.9826 4.77407 17.001 4.86632 17.001 4.95949C17.001 5.05266 16.9826 5.14491 16.9469 5.23097C16.9112 5.31702 16.8589 5.39518 16.7929 5.46098L12.543 9.71089C12.41 9.84389 12.2296 9.91861 12.0415 9.91861C11.8534 9.91861 11.673 9.84389 11.54 9.71089C11.407 9.57788 11.3323 9.39749 11.3323 9.2094C11.3323 9.0213 11.407 8.84091 11.54 8.70791L15.2898 4.95949L11.54 1.21107C11.474 1.14528 11.4217 1.06711 11.386 0.981059C11.3503 0.895005 11.3319 0.802752 11.3319 0.709584C11.3319 0.616415 11.3503 0.524162 11.386 0.438109C11.4217 0.352055 11.474 0.273891 11.54 0.208095Z"
+                  fill="white"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0 4.95948C0 4.77162 0.0746263 4.59146 0.207462 4.45862C0.340297 4.32579 0.52046 4.25116 0.708318 4.25116H15.583C15.7708 4.25116 15.951 4.32579 16.0838 4.45862C16.2167 4.59146 16.2913 4.77162 16.2913 4.95948C16.2913 5.14734 16.2167 5.3275 16.0838 5.46033C15.951 5.59317 15.7708 5.6678 15.583 5.6678H0.708318C0.52046 5.6678 0.340297 5.59317 0.207462 5.46033C0.0746263 5.3275 0 5.14734 0 4.95948Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </form>
+          <article class="registration__pluses">
+            <h1 class="registration__headding">LOYALTY HAS ITS PERKS</h1>
+            <p class="registration__descript">
+              Get in on the loyalty program where you can earn points and unlock
+              serious perks. Starting with these as soon as you join:
+            </p>
+            <ul class="registration__list">
+              <li class="registration__item">15% off welcome offer</li>
+              <li class="registration__item">
+                Free shipping, returns and exchanges on all orders
+              </li>
+              <li class="registration__item">
+                $10 off a purchase on your birthday
+              </li>
+              <li class="registration__item">Early access to products</li>
+              <li class="registration__item">Exclusive offers & rewards</li>
+            </ul>
+          </article>
+        </section>
+      </div>
+      <div class="subscribe-wrap">
+        <div class="subscribe-bkg"></div>
+        <section class="subscribe flex">
+          <aside class="subscribe__left">
+            <img
+              src="img/Subscriber.webp"
+              alt="Фотография подписчика"
+              class="subscribe__img"
+            />
+            <p class="subscribe__left__text">
+              &laquo;Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+              <span>a&nbsp;pulvinar</span> purus condimentum&raquo;
+            </p>
+          </aside>
+          <div class="subscribe__right">
+            <h3 class="subscribe__right__headding">SUBSCRIBE</h3>
+            <p class="subscribe__right__text">
+              FOR OUR NEWLETTER AND PROMOTION
+            </p>
+            <form class="subscribe__right__form" action="#">
+              <input
+                required
+                type="email"
+                name="email"
+                class="subscribe__right__form__input"
+                placeholder="Enter Your Email"
+              /><button type="submit" class="subscribe__right__form__btn">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </section>
+      </div>
+      <div class="footer-wrap">
+        <footer class="footer flex">
+          <p class="footer__text">© 2021 Brand All Rights Reserved.</p>
+          <div class="footer__socials flex">
+            <div class="fa-brands fa-facebook-f fa-xl"></div>
+            <div class="fa-brands fa-instagram fa-xl"></div>
+            <div class="fa-brands fa-pinterest-p fa-xl"></div>
+            <div class="fa-brands fa-twitter fa-xl"></div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+@import "vars";
+
+@mixin content-center() {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+@mixin paddings() {
+  padding-left: $standart-pdl;
+  padding-right: $standart-pdr;
+}
+@mixin fontStyles($size, $weigth, $line-hight, $color) {
+  font-size: $size;
+  font-weight: $weigth;
+  line-height: $line-hight;
+  color: $color;
+}
+
+.registration {
+  @include paddings();
+  @include content-center();
+  padding-bottom: calc($standart-pdb * 6);
+  flex-wrap: wrap;
+
+  &__form {
+    padding-top: calc($standart-pdt * 4);
+    width: calc($content-width * 0.315789);
+  }
+  &__headding {
+    padding-bottom: calc($standart-pdb * 1.25);
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    outline: none;
+    padding: $standart-pdt;
+    border: 1px solid #a4a4a4;
+    box-sizing: border-box;
+    font-size: calc($fontSize * 0.8125);
+  }
+  &__input::placeholder {
+    @include fontStyles(calc($fontSize * 0.8125), 300, normal, #b1b1b1);
+  }
+  &__input:focus {
+    @include fontStyles(calc($fontSize * 0.8125), 300, normal, $blackColor);
+  }
+
+  &__name,
+  &__email {
+    margin-bottom: calc($standart-pdb * 1.25);
+  }
+  &__radio-box {
+    padding-top: calc($standart-pdt * 2.125);
+    padding-bottom: calc($standart-pdt * 2.125);
+    justify-content: flex-start;
+  }
+  &__radio:checked {
+    background-color: $pinkColor;
+  }
+  &__radio-text {
+    padding-left: calc($standart-pdl * 0.625);
+    padding-right: calc($standart-pdr * 1.25);
+    @include fontStyles(calc($fontSize * 0.6875), 300, normal, $blackColor);
+    align-self: center;
+  }
+
+  &__text {
+    padding-top: $standart-pdt;
+    padding-bottom: calc($standart-pdb * 2.5);
+    @include fontStyles(calc($fontSize * 0.8125), 300, normal, #b1b1b1);
+  }
+  &__btn {
+    @include fontStyles(calc($fontSize * 0.875), 300, normal, $whiteColor);
+    background-color: #f16d7f;
+    border: 1px solid $pinkColor;
+    box-sizing: border-box;
+    padding: $standart-pdt calc($standart-pdl * 2);
+    transition: all 0.1s;
+  }
+  &__btn:hover {
+    color: $pinkColor;
+    background-color: $whiteColor;
+    border: 1px solid $pinkColor;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  &__svg {
+    padding-left: calc($standart-pdl * 1.25);
+  }
+  &__btn:hover &__svg path {
+    fill: $pinkColor;
+  }
+
+  &__btn:active {
+    animation: $scale-animation;
+  }
+
+  &__pluses,
+  &__headding {
+    width: calc($content-width * 0.57193);
+    @include fontStyles(calc($fontSize * 1.5), 300, normal, $blackColor);
+  }
+  &__pluses {
+    padding-top: calc($standart-pdt * 4);
+  }
+  padding-top: calc($standart-pdt * 4);
+  &__list {
+    list-style-type: none;
+  }
+  &__headding,
+  &__descript {
+    padding-bottom: calc($standart-pdb * 1.375);
+  }
+  &__item {
+    padding-bottom: $standart-pdb;
+  }
+  &__item::before {
+    content: url(img/Vector.svg);
+    padding-right: calc($standart-pdr * 1.5);
+  }
+}
