@@ -592,17 +592,22 @@ summary::-webkit-details-marker {
 .brad-cramp__nav {
   align-self: center;
 }
-.brad-cramp__nav__link {
+.brad-cramp__nav-ul {
+  list-style-type: none;
+}
+.brad-cramp__nav-link {
   font-size: 14px;
   font-weight: 300;
   line-height: normal;
   color: #636363;
 }
-.brad-cramp__nav__link:last-child {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: normal;
-  color: #f16d7f;
+.brad-cramp__nav-item:not(:last-child)::after {
+  content: "/";
+  padding: 0 8px;
+}
+.brad-cramp__nav-item:last-child .brad-cramp__nav-link {
+  font-weight: bold;
+  color: #F16D7F;
 }
 
 .product {

@@ -32,12 +32,21 @@
   &__nav {
     align-self: center;
 
-    &__link {
-      @include fontStyles(calc($fontSize * 0.875), 300, normal, #636363);
+    &-ul {
+      list-style-type: none;
     }
 
-    &__link:last-child {
-      @include fontStyles(calc($fontSize * 0.875), 700, normal, $pinkColor);
+    &-link {
+      @include fontStyles(calc($fontSize * 0.875), 300, normal, #636363);
+    }
+    &-item:not(:last-child)::after {
+      content: '/';
+      padding: 0 8px;
+    }
+    
+    &-item:last-child &-link {
+      font-weight: bold;
+      color: #F16D7F;
     }
   }
 }
