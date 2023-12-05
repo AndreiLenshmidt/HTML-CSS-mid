@@ -110,6 +110,47 @@ summary::-webkit-details-marker {
   height: 2.375rem;
 }
 
+.brad-cramp-wrap {
+  background-color: #f8f3f4;
+}
+
+.brad-cramp {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.brad-cramp__headding {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+}
+.brad-cramp__link {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+  color: #f16d7f;
+}
+.brad-cramp__nav {
+  align-self: center;
+}
+.brad-cramp__nav-ul {
+  list-style-type: none;
+}
+.brad-cramp__nav-link {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: normal;
+  color: #636363;
+}
+.brad-cramp__nav-item:not(:last-child)::after {
+  content: "/";
+  padding: 0 8px;
+}
+.brad-cramp__nav-item:last-child .brad-cramp__nav-link {
+  font-weight: bold;
+  color: #f16d7f;
+}
+
 .fa-header-icons {
   color: #e8e8e8;
   padding-left: 1rem;
@@ -569,47 +610,6 @@ summary::-webkit-details-marker {
   align-items: center;
 }
 
-.brad-cramp-wrap {
-  background-color: #f8f3f4;
-}
-
-.brad-cramp {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.brad-cramp__headding {
-  padding-top: 3.75rem;
-  padding-bottom: 3.75rem;
-}
-.brad-cramp__link {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: normal;
-  color: #f16d7f;
-}
-.brad-cramp__nav {
-  align-self: center;
-}
-.brad-cramp__nav-ul {
-  list-style-type: none;
-}
-.brad-cramp__nav-link {
-  font-size: 14px;
-  font-weight: 300;
-  line-height: normal;
-  color: #636363;
-}
-.brad-cramp__nav-item:not(:last-child)::after {
-  content: "/";
-  padding: 0 8px;
-}
-.brad-cramp__nav-item:last-child .brad-cramp__nav-link {
-  font-weight: bold;
-  color: #F16D7F;
-}
-
 .product {
   max-width: 1140px;
   margin: 0 auto;
@@ -622,6 +622,7 @@ summary::-webkit-details-marker {
 }
 .product__img-box {
   background-color: #f7f7f7;
+  height: 100vh;
 }
 .product__img {
   max-width: 1140px;
@@ -758,6 +759,7 @@ summary::-webkit-details-marker {
   padding-top: 3.25rem;
   padding-bottom: 4rem;
   position: relative;
+  min-height: 1rem;
 }
 .catalog__fillters {
   width: 31%;
@@ -766,7 +768,7 @@ summary::-webkit-details-marker {
 .catalog__fillters:first-child {
   position: absolute;
   left: 0;
-  top: 2rem;
+  top: 2.2rem;
   z-index: 5;
 }
 .catalog__fillters:nth-child(2) {
@@ -828,6 +830,9 @@ summary::-webkit-details-marker {
   color: #6f6e6e;
   padding-top: 0.6875rem;
 }
+.catalog__datails:last-child .catalog__datails__desc {
+  padding-right: 0;
+}
 .catalog__datails__desc {
   font-size: 14px;
   font-weight: 400;
@@ -883,7 +888,7 @@ summary::-webkit-details-marker {
 .swiper-pagination {
   display: flex;
   justify-content: space-between;
-  width: 385.1351351351px !important;
+  width: 386px !important;
   height: 43px;
   padding-top: 10px;
   padding-left: 12px;
@@ -891,7 +896,7 @@ summary::-webkit-details-marker {
   box-sizing: border-box;
   overflow: hidden;
   border: 1px solid #ebebeb;
-  left: 33.15% !important;
+  left: calc(50% - 193px) !important;
 }
 .swiper-button-prev {
   top: 98.5% !important;
@@ -949,9 +954,10 @@ summary::-webkit-details-marker {
   flex-wrap: wrap;
 }
 .order__products {
-  max-width: 651.99906px;
   flex-direction: column;
   gap: 2.5rem;
+  max-width: 652.0002px;
+  flex-grow: 1;
 }
 .order__products__btn-box {
   padding-top: 2rem;
@@ -977,7 +983,8 @@ summary::-webkit-details-marker {
 }
 .order__products__goods {
   box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
-  position: relative;
+  width: 100%;
+  justify-content: flex-start;
 }
 .order__products__goods__close {
   position: absolute;
@@ -1013,8 +1020,9 @@ summary::-webkit-details-marker {
   width: 16.375rem;
 }
 .order__products__goods__box {
-  width: 24.375rem;
+  width: 100%;
   padding: 1.375rem 1.375rem 1.375rem 2rem;
+  position: relative;
 }
 .order__products__goods__name {
   width: 13rem;
@@ -1173,7 +1181,7 @@ summary::-webkit-details-marker {
   max-width: 1140px;
   margin: 0 auto;
   padding-bottom: 6rem;
-  flex-wrap: wrap;
+  gap: 1rem;
   padding-top: 4rem;
 }
 .registration__form {
@@ -1266,13 +1274,13 @@ summary::-webkit-details-marker {
   animation: scale-btn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .registration__pluses, .registration__headding {
-  width: 652.0002px;
   font-size: 24px;
   font-weight: 300;
   line-height: normal;
   color: #222222;
 }
 .registration__pluses {
+  max-width: 60%;
   padding-top: 4rem;
 }
 .registration__list {
@@ -1321,6 +1329,90 @@ summary::-webkit-details-marker {
   .subscribe {
     align-items: center;
     flex-direction: column;
+  }
+  .product {
+    margin-top: 0;
+  }
+  .shop__container_product-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .shop__container_product-flex > .shop__card {
+    width: 48.8%;
+  }
+  .shop__container_product-flex > .shop__card:last-child {
+    display: none;
+  }
+  .catalog {
+    padding-bottom: 4rem;
+  }
+  .catalog__goods {
+    padding-bottom: 4.5rem;
+  }
+  .catalog__fillter-box {
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .catalog__fillters:first-child {
+    top: 0.5rem;
+    right: -5px;
+  }
+  .catalog__fillters:nth-child(2) {
+    right: 0;
+    left: auto;
+  }
+  .catalog__goods > .shop__card:last-child {
+    display: none;
+  }
+  .swiper-button-prev {
+    top: auto !important;
+    bottom: 0.3%;
+  }
+  .swiper-button-next {
+    top: auto !important;
+    bottom: 0.3%;
+  }
+  .order {
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 3.875rem;
+    gap: 0;
+  }
+  .order__products {
+    max-width: 734.0004px;
+  }
+  .order__products__goods {
+    width: 100%;
+  }
+  .order__form-box {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    gap: 16px;
+  }
+  .order__form__quote__haedding {
+    padding-top: 4rem;
+  }
+  .order__form__quote, .order__form__total {
+    width: 22.5rem;
+    box-sizing: border-box;
+  }
+  .order__form__total {
+    margin-top: 6.4375rem;
+    margin-bottom: 5.375rem;
+  }
+  .registration__descript, .registration__list, .registration__headding {
+    max-width: 360.0006px;
+  }
+  .registration__pluses {
+    min-width: 360.0006px;
+    flex-grow: 0.4;
+    font-size: 16px;
+  }
+  .registration__item-span {
+    padding-bottom: 1rem;
+    padding-left: 47px;
   }
 }
 @media (max-width: 768px) {

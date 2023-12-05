@@ -19,7 +19,7 @@
   @include paddings();
   @include content-center();
   padding-bottom: calc($standart-pdb * 6);
-  flex-wrap: wrap;
+  gap: $standart-gap;
 
   &__form {
     padding-top: calc($standart-pdt * 4);
@@ -97,10 +97,10 @@
 
   &__pluses,
   &__headding {
-    width: calc($content-width * 0.57193);
     @include fontStyles(calc($fontSize * 1.5), 300, normal, $blackColor);
   }
   &__pluses {
+    max-width: 60%;
     padding-top: calc($standart-pdt * 4);
   }
   padding-top: calc($standart-pdt * 4);
@@ -114,6 +114,7 @@
   &__item {
     padding-bottom: $standart-pdb;
   }
+  
   &__item::before {
     content: url(img/Vector.svg);
     padding-right: calc($standart-pdr * 1.5);

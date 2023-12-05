@@ -24,6 +24,7 @@
     padding-top: calc($standart-pdt * 3.25);
     padding-bottom: calc($standart-pdb * 4);
     position: relative;
+    min-height: $standart-hight;
   }
   &__fillters {
     width: 31%;
@@ -32,7 +33,7 @@
   &__fillters:first-child {
     position: absolute;
     left: 0;
-    top: calc($standart-pdt * 2);
+    top: calc($standart-pdt * 2.2);
     z-index: 5;
   }
   &__fillters:nth-child(2) {
@@ -89,6 +90,9 @@
     padding-top: calc($standart-pdt * 0.6875);
   }
 
+  &__datails:last-child &__datails__desc {
+    padding-right: 0;
+  }
   &__datails__desc {
     @include fontStyles(calc($fontSize * 0.875), 400, normal, #6f6e6e);
     padding-right: calc($standart-pdr * 1.625);
@@ -144,7 +148,7 @@
   &-pagination {
     display: flex;
     justify-content: space-between;
-    width: calc($content-width / 2.96) !important;
+    width: $pagination-width !important;
     height: 43px;
     padding-top: 10px;
     padding-left: 12px;
@@ -152,7 +156,7 @@
     box-sizing: border-box;
     overflow: hidden;
     border: 1px solid #ebebeb;
-    left: 33.15% !important;
+    left: calc(50% - 193px) !important;
   }
 
   &-button-prev {

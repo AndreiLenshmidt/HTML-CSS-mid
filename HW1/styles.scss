@@ -115,6 +115,41 @@ summary::-webkit-details-marker {
   height: calc($standart-hight * 2.375);
 }
 
+.brad-cramp-wrap {
+  background-color: $brad-cramp-bkg;
+}
+.brad-cramp {
+  @include content-center();
+  @include paddings();
+
+  &__headding {
+    padding-top: calc($standart-pdt * 3.75);
+    padding-bottom: calc($standart-pdb * 3.75);
+  }
+  &__link {
+    @include fontStyles(calc($fontSize * 1.5), 400, normal, $pinkColor);
+  }
+  &__nav {
+    align-self: center;
+
+    &-ul {
+      list-style-type: none;
+    }
+
+    &-link {
+      @include fontStyles(calc($fontSize * 0.875), 300, normal, #636363);
+    }
+    &-item:not(:last-child)::after {
+      content: "/";
+      padding: 0 8px;
+    }
+
+    &-item:last-child &-link {
+      font-weight: bold;
+      color: #f16d7f;
+    }
+  }
+}
 // Awsome icons
 .fa {
   &-header-icons {

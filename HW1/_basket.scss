@@ -35,9 +35,10 @@
   flex-wrap: wrap;
 
   &__products {
-    max-width: calc($content-width * 0.571929);
     flex-direction: column;
     gap: calc($standart-gap * 2.5);
+    max-width: calc($content-width * 0.57193);
+    flex-grow: 1;
 
     &__btn-box {
       padding-top: calc($standart-pdt * 2);
@@ -61,7 +62,8 @@
 
     &__goods {
       box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
-      position: relative;
+      width: 100%;
+      justify-content: flex-start;
 
       &__close {
         position: absolute;
@@ -99,9 +101,10 @@
       width: calc($standart-width * 16.375);
     }
     &__goods__box {
-      width: calc($standart-width * 24.375);
+      width: 100%;
       padding: calc($standart-pdt * 1.375) calc($standart-pdr * 1.375)
         calc($standart-pdr * 1.375) calc($standart-pdr * 2);
+        position: relative;
     }
     &__goods__name {
       width: calc($standart-width * 13);
