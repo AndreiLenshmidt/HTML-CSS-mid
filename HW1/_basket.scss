@@ -68,6 +68,8 @@
       &__close {
         position: absolute;
         top: 27px;
+        width:18px;
+        height:18px;
         border: 1px solid transparent;
         border-radius: 4px;
         padding: 3px;
@@ -104,7 +106,7 @@
       width: 100%;
       padding: calc($standart-pdt * 1.375) calc($standart-pdr * 1.375)
         calc($standart-pdr * 1.375) calc($standart-pdr * 2);
-        position: relative;
+      position: relative;
     }
     &__goods__name {
       width: calc($standart-width * 13);

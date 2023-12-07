@@ -125,6 +125,7 @@ summary::-webkit-details-marker {
   &__headding {
     padding-top: calc($standart-pdt * 3.75);
     padding-bottom: calc($standart-pdb * 3.75);
+    text-align: center;
   }
   &__link {
     @include fontStyles(calc($fontSize * 1.5), 400, normal, $pinkColor);

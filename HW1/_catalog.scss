@@ -54,6 +54,8 @@
   }
   &__fillter-icon {
     padding-left: calc($standart-pdl * 0.6875);
+    width: 15px;
+    height: 10px;
   }
   &__fillters[open] &__fillter-desc {
     color: $pinkColor;
@@ -96,10 +98,13 @@
   &__datails__desc {
     @include fontStyles(calc($fontSize * 0.875), 400, normal, #6f6e6e);
     padding-right: calc($standart-pdr * 1.625);
+    position: relative;
   }
   &__datails__desc::after {
     content: url(img/arrow-down.svg);
+    position: absolute;
     padding-left: calc($standart-pdl * 0.625);
+    top: 0;
   }
 
   &__datails-box {
@@ -116,6 +121,7 @@
 
   &__datails {
     position: relative;
+    display: inline;
   }
   &__datails[open] &__size {
     padding: calc($standart-pdt * 0.5625) calc($standart-pdt * 0.5625) 0
@@ -156,7 +162,7 @@
     box-sizing: border-box;
     overflow: hidden;
     border: 1px solid #ebebeb;
-    left: calc(50% - 193px) !important;
+    left: calc(50% - $pagination-width / 2) !important;
   }
 
   &-button-prev {
